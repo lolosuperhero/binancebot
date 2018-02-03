@@ -3,7 +3,7 @@
 import requests
 import json
 
-<<<<<<< HEAD
+
 link = "http://www.binance.com/api/v1/depth?symbol=LSKETH&limit=100"
 f = requests.get(link)
 j = json.loads(f.text)
@@ -50,11 +50,3 @@ for trades in j:
         lastValue=float(trades['p'])
 tendance=(lastValue-firstValue)
 print("tendance=%f" % (tendance))
-=======
-link = "http://www.binance.com/api/v1/depth?symbol=LSKETH&limit=5"
-f = requests.get(link)
-
-j = json.loads(f.text)
-
-print j['bids'][0][0]
->>>>>>> b92623b8405b096bb1fef550fed7c0bf20b2323d
